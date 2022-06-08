@@ -1,7 +1,7 @@
 # habi-prueba
 
 # Tecnologías a usar
-- Python 3.9.2 (Virtual Enviroment)
+- Python 3.9.2
 - MySQL
 - JSON
 
