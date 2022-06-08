@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Virtual environment
+api/Scripts
+api/Lib
+api/Include
+api/pyvenv.cfg
