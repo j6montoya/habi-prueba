@@ -15,7 +15,7 @@
   - year: Año de construcción del inmueble
 - Se realizaron pruebas unitarias con unittest para validar la conexión a la base de datos.
 
-- ### Instalación
+ ### Instalación
   Se recomienda instalar un entorno virtual en el directorio de api (opcional)
   ```
     python -m venv .
@@ -24,7 +24,7 @@
   ```
     pip install requirements.txt
   ```
-- ### Ejecución
+  ### Ejecución
   Variables de entorno de ejecución
   | Variable | Descripción
   |----------|-----------|
@@ -43,7 +43,7 @@
   ```
     DB_HOSTNAME= DB_PORT= DB_USERNAME= DB_PASSWORD= DB_NAME= HOSTNAME= PORT= python app.py
   ```
- - ### Consumo del servicio de consultas
+  ### Consumo del servicio de consultas
    Usaremos curl como ejemplo para el consumo del servicio de consultas.
 
    Obtener todos los registros según el requerimiento
@@ -86,7 +86,7 @@
         }
     }...
    ```
-- ### Ejecución de las pruebas
+  ### Ejecución de las pruebas
   Para ejecutar las pruebas ingresar al directorio api/test
   
   Configurar las credenciales de la base de datos, usando las variables de entorno o modificarlas en test_db.py
@@ -97,6 +97,7 @@
   |DB_USERNAME|Usuario de la base de datos|
   |DB_PASSWORD|Contraseña de la base de datos|
   |DB_NAME|Nombre de la base de datos|
+
   Ejecutar las pruebas
   ```
    python -m unittest test_db.py
@@ -105,7 +106,7 @@
   ```
     DB_HOSTNAME= DB_PORT= DB_USERNAME= DB_PASSWORD= DB_NAME= HOSTNAME= PORT= python -m unittest test_db.py
   ```
-- ### Propuesta de mejora en la estructura de la base de datos de servicio de consultas
+  ### Propuesta de mejora en la estructura de la base de datos de servicio de consultas
   Crear otra tabla (current_status) donde se guarde el estado actual de la propiedad, esto mejoraría la consulta de los inmuebles ya que evita que se deba crear una subconsulta para obtener primero el ultimo valor en la tabla de historíco de estados. En el repositorio se encuentra el modelo propuesto (search_property.png).
 
   Consulta con el modelo actual
